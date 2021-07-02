@@ -1,0 +1,40 @@
+.cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  align-items: center;
+}
+
+.refresh-btn-container {
+  display: flex;
+  justify-content: center;
+}
+
+.refresh-btn {
+  font-weight: 900;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  text-transform: uppercase;
+  width: 320px;
+  height: 40px;
+  background: #5e217a;
+  border-radius: 6px;
+  color: #fff;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease-in-out;
+}
+
+.refresh-btn:hover {
+  background: #8e31b9;
+}
+
+@media (max-width: 768px) {
+  .cards-container {
+    justify-content: center;
+  }
+
+  .refresh-btn-container {
+    padding: 20px;
+  }
+}

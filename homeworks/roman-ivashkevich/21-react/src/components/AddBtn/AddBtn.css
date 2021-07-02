@@ -1,0 +1,88 @@
+.add-btn-container {
+  display: flex;
+  width: 20%;
+  padding: 20px;
+}
+
+.add-btn-wrapper {
+  position: relative;
+  width: 100%;
+  padding-bottom: 97%;
+  border: 4px solid #5e217a;
+  border-radius: 16px;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.line {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 30%;
+  height: 4px;
+  background-color: #5e217a;
+  transform: translate(-50%);
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 4px;
+  background-color: #5e217a;
+  transform: translate(-50%) rotate(90deg);
+}
+
+.spinner {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  height: 30%;
+  animation: spinner infinite 3s linear;
+}
+
+._hide {
+  display: none;
+}
+
+@keyframes spinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .add-btn-container {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .add-btn-container {
+    width: 35%;
+  }
+}
+
+@media (max-width: 580px) {
+  .add-btn-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 400px) {
+  .add-btn-container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 320px) {
+  .add-btn-container {
+    width: 100%;
+  }
+}

@@ -1,0 +1,104 @@
+.card-container {
+  position: relative;
+  width: 20%;
+  padding: 20px;
+}
+
+.card-wrapper {
+  position: relative;
+  display: flex;
+  padding-bottom: 100%;
+  width: 100%;
+}
+
+.card-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  border-radius: 16px;
+  cursor: pointer;
+  z-index: 5;
+}
+
+.card_img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.card-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.card-wrapper:hover::after {
+  opacity: 1;
+}
+
+.loading {
+  opacity: 1;
+  animation: circle 6s linear infinite;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
+  fill: #fff;
+}
+
+@keyframes circle {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+@media (max-width: 1024px) {
+  .card-container {
+    width: 25%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    width: 35%;
+  }
+}
+
+@media (max-width: 580px) {
+  .card-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 400px) {
+  .card-container {
+    width: 75%;
+  }
+}
+
+@media (max-width: 320px) {
+  .card-container {
+    width: 100%;
+  }
+}
