@@ -1,0 +1,10 @@
+.chart {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 10px;
+}
+
+.itemWrapper {
+  padding: 0 4px;
+}
