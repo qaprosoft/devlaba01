@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  font-size: 36px;
+  font-weight: 700;
+  color: rgb(20, 109, 20);
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.article {
+  margin: 20px;
+  padding: 20px;
+  border: 2px solid rgb(20, 109, 20);
+  border-radius: 8px;
+}
+
+.article__title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.article__content {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.article__content-img {
+  border-radius: 50%;
+  width: 300px;
+  height: 300px;
+}
