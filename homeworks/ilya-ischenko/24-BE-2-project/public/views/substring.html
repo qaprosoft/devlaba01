@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Substring</title>
+</head>
+
+<body>
+  <form onsubmit="getSubstringIndex(event); return false">
+    <input placeholder="string" type="text" name="string" id="string" required />
+    <input placeholder="substring" type="text" name="substring" id="substring" required />
+    <button>Get substr</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    const resultBlock = document.querySelector('#result');
+
+    async function getSubstringIndex(e) {
+      const string = e.currentTarget.elements.string.value;
+      const substring = e.currentTarget.elements.substring.value;
+
+      const response = await fetch('/substring', {
+        method: 'POST',
+        body: JSON.stringify({ string, substring }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      });
+
+      const result = await response.json();
+      if (response.status === 200) {
+        resultBlock.innerHTML = result.result;
+      } else {
+        resultBlock.innerHTML = result.error;
+      }
+    }
+  </script>
+</body>
+
+</html>

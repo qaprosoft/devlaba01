@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reverse</title>
+</head>
+
+<body>
+  <form onsubmit="reverse(event); return false">
+    <input placeholder="string" type="text" name="string" id="string" required />
+    <button>reverse</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    const resultBlock = document.querySelector('#result');
+
+    async function reverse(e) {
+      const string = e.currentTarget.elements.string.value;
+
+      const response = await fetch('/reverse', {
+        method: 'POST',
+        body: JSON.stringify({ string }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      });
+
+      const result = await response.json();
+      if (response.status === 200) {
+        resultBlock.innerHTML = result.result;
+      } else {
+        resultBlock.innerHTML = result.error;
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <form onsubmit="makeSum(event); return false">
+    <input placeholder="first number" type="number" name="num1" id="num1" required />
+    <input placeholder="second number" type="number" name="num2" id="num2" required />
+    <button>Calculte</button>
+  </form>
+
+  <p id="result"></p>
+
+  <script>
+    const resultBlock = document.querySelector('#result');
+
+    async function makeSum(e) {
+      const num1 = e.currentTarget.elements.num1.value;
+      const num2 = e.currentTarget.elements.num2.value;
+
+      const response = await fetch('/sum', {
+        method: 'POST',
+        body: JSON.stringify({ num1, num2 }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      });
+
+      const result = await response.json();
+      if (response.status === 200) {
+        resultBlock.innerHTML = result.result;
+      } else {
+        resultBlock.innerHTML = result.error;
+      }
+    }
+  </script>
+</body>
+
+</html>
