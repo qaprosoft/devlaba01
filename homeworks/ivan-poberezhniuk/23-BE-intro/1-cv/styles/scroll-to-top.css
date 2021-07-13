@@ -1,0 +1,14 @@
+.scroll-to-top {
+  display: none;
+  height: 3rem;
+  width: 3rem;
+  z-index: 333;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: var(--main-bg-color);
+  text-align: center;
+  padding-top: 0.4rem;
+  color: var(--text-color-alt);
+  font-size: 1.5rem;
+}

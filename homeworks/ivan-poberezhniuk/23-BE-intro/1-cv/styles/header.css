@@ -1,0 +1,42 @@
+.header {
+  background-color: var(--main-bg-color);
+  color: var(--text-color-alt);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 1rem 5rem 1rem;
+  grid-area: header;
+  z-index: 999;
+}
+
+.header__name {
+  padding: 1rem 2rem;
+  border: 3px solid var(--main-bg-color-white);
+  text-transform: uppercase;
+  letter-spacing: 1.2rem;
+  transition-duration: 0.3s;
+}
+
+.header__name:hover {
+  color: var(--main-bg-color);
+  background-color: var(--main-bg-color-white);
+  transform: scale(1.05);
+}
+
+.header__position {
+  position: relative;
+  margin: 3rem auto 0 auto;
+  text-transform: uppercase;
+  letter-spacing: 0.8rem;
+}
+
+.header__position::after {
+  content: "";
+  width: 50%;
+  position: absolute;
+  bottom: -55%;
+  left: 25%;
+  border-bottom: 3px solid var(--main-bg-color-white);
+}

@@ -1,0 +1,46 @@
+.side {
+  background-color: var(--main-bg-color-alt);
+  padding: 1rem 3rem 1rem 2rem;
+  text-align: end;
+  grid-area: aside;
+}
+
+.side-list__outer > li {
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+  font-size: 1.2rem;
+}
+
+.side-list__inner > li {
+  text-transform: capitalize;
+  margin: 0.7rem 0 0 1.5rem;
+  font-size: 0.8rem;
+  letter-spacing: 0.1rem;
+}
+
+.side-list__email {
+  text-transform: lowercase;
+}
+
+.side__humburger-toggle {
+  display: none;
+}
+
+.side__humburger-icon {
+  display: none;
+}
+
+.side__humburger-icon {
+  width: 35px;
+  height: 4px;
+  position: relative;
+  background-color: var(--main-bg-color);
+  margin-bottom: 5px;
+}
+
+.side__humburger-icon:hover {
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1) ease;
+}

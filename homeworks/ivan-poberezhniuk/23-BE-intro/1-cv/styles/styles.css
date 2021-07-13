@@ -1,0 +1,50 @@
+@import './variables.css';
+@import './animations.css';
+@import './header.css';
+@import './gallery.css';
+@import './aside.css';
+@import './main.css';
+@import './scroll-to-top.css';
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--text-color);
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: var(--main-text-color);
+  text-decoration: none;
+  display: block;
+}
+
+a:visited {
+  color: var(--main-text-color);
+}
+
+a:focus {
+  outline: none;
+  background-color: var(--main-bg-color-yellow);
+}
+
+a:hover {
+  animation: 0.5s linear 0s alternate flip;
+  background-color: var(--main-bg-color-yellow);
+}
+
+h2,
+h3 {
+  margin: 0;
+}

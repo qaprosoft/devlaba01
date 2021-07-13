@@ -1,0 +1,110 @@
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 0;
+    flex-direction: column;
+    grid-template-areas:
+      "header header header"
+      "aside aside aside"
+      "gallery gallery gallery"
+      "main main main";
+  }
+
+  .header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 1rem 1rem 3rem 1rem;
+  }
+
+  .header__name {
+    width: 100%;
+    word-wrap: break-word;
+    font-size: 1.3rem;
+  }
+
+  .header__position {
+    font-size: 1.1rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .gallery {
+    flex-direction: column;
+    max-height: none;
+    align-items: center;
+    padding: 0;
+  }
+
+  .gallery__image {
+    max-height: none;
+  }
+
+  .gallery__image-container {
+    width: 100%;
+    max-width: none;
+  }
+
+  .side {
+    width: 100%;
+    text-align: center;
+    padding-left: 3rem;
+  }
+
+  .side-list__outer {
+    display: none;
+  }
+
+  .side__toggle {
+    display: block;
+    width: 0px;
+  }
+
+  .side-list__inner > li {
+    margin: 0;
+  }
+
+  .side__humburger-toggle {
+    position: absolute;
+    display: block;
+    width: 40px;
+    height: 35px;
+    opacity: 0;
+    z-index: 3333333333;
+    transform: translate(-15%, -25%);
+  }
+
+  .side__humburger-icon {
+    display: block;
+    transform-origin: 4px 2px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  .side__humburger-icon:nth-last-child(3) {
+    transform-origin: 0% 100%;
+  }
+
+  .side__humburger-icon:nth-last-child(2) {
+    margin-bottom: 0;
+  }
+
+  .side .side__humburger-toggle:checked ~ .side-list__outer {
+    display: block;
+  }
+
+  .side .side__humburger-toggle:checked ~ span {
+    transform: rotate(45deg) translate(-2px, -1px);
+  }
+
+  .side .side__humburger-toggle:checked ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  .side .side__humburger-toggle:checked ~ span:nth-last-child(3) {
+    opacity: 0;
+  }
+
+  .scroll-to-top {
+    display: block;
+  }
+}

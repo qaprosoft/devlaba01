@@ -1,0 +1,30 @@
+.main {
+  padding: 3rem 3rem 3rem 3rem;
+  letter-spacing: 0.05rem;
+  position: relative;
+  grid-area: main;
+}
+
+.article {
+  margin: 2rem 0;
+}
+
+.article__header {
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+.article__text {
+  line-height: 1.5rem;
+}
+
+.wrapper {
+  padding: 0 20%;
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header header header"
+    "gallery gallery gallery"
+    "aside main main";
+}
