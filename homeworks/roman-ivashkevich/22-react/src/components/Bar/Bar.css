@@ -1,0 +1,13 @@
+.bar {
+  width: 40px;
+  background: #e1e1e1;
+  margin-right: 8px;
+}
+
+.bar:last-child {
+  margin: 0;
+}
+
+.red {
+  background: rgba(186, 0, 0, 0.6);
+}

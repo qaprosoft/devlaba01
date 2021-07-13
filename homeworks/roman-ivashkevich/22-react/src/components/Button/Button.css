@@ -1,0 +1,20 @@
+.normal-distribution-btn {
+  max-width: 180px;
+  padding: 10px;
+  width: 100%;
+  background: #4c6eaf;
+  border-radius: 6px;
+  margin-top: 32px;
+  border: none;
+  color: #fff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.normal-distribution-btn:first-child {
+  margin-right: 16px;
+}

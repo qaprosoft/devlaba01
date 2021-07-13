@@ -1,0 +1,7 @@
+.chart {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 40px;
+}
